@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Product Grid with Order Form</title>
+    <!-- Load Font Awesome for the close icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+
+</head>
+<body>
+ <!-- Navbar -->
+ <!-- Navigation Header -->
+    <nav class="main-nav">
+      
+        <div class="nav-container">
+              <div class="logo">
+      <img src="imges/logo images.png" alt="Baltistan Handicrafts Logo">
+    </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="brand.html" class="nav-link">Brand</a>
+                <a href="About us.html" class="nav-link">About</a>
+                <a href="contact us.html" class="nav-link">Contact</a>
+                <a href="All vendor.html" class="nav-link">All Vendor</a>
+            </div>
+            <div class="search-box-nav">
+                <input type="text" placeholder="Search product..." id="main-search">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </nav>
+   <!-- Slider Section -->
+  <div class="slider">
+    <div class="slides">
+      <img src="imges/2023-12-28-658d2cba58386.webp" alt="Handicraft 1" class="image">
+      <img src="imges/2024-02-14-65ccddc0aef77.webp" alt="Handicraft 2" class="image">
+      <img src="imges/2023-01-27-63d366b7b5d31.png" alt="Handicraft 3" class="image">
+
+    </div>
+        </div>
+    <button class="arrow left" >&#10094;</button>
+    <button class="arrow right" >&#10095;</button>
+  </div><div class="dots"></div>
+    <!-- Featured Products Section -->
+<section class="featured-products">
+  <h1>Featured Products</h1>
+  <p>Top Choices Loved by Customers</p>
+    <!-- PRODUCT GRID (16 Mock Cards) -->
+    <div class="product-grid">
+
+        <!-- Card 1 -->
+        <div class="product-card">
+            <img src="imges/pottery.png" onerror="this.src='https://placehold.co/300x180'" alt="Zahr Mohra parrots">
+            <h3>Traditional pottery G.B</h3>
+            <p>Rs 9,500.00</p>
+            <button class="add-to-cart-btn open-modal"
+                 data-img="imges/hand1.jpg"
+                 data-title="Traditional pottery G.B"
+                 data-price="9500.00"
+                 data-desc="Hand-carved parrots made from rare Zahr Mohra stone, symbolizing love and companionship. Perfect for a mantelpiece or display case.">
+                Add to Cart
+            </button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="product-card">
+            <img src="imges/hand1.jpg" onerror="this.src='https://placehold.co/300x180'" alt="Brass Vase">
+            <h3>Handmade Baskit</h3>
+            <p>Rs 3,200.50</p>
+            <button class="add-to-cart-btn open-modal"
+                 data-img="imges/hand11.jpg"
+                 data-title="Vintage Engraved Brass Vase"
+                 data-price="3200.50"
+                 data-desc="A beautifully detailed brass vase, approximately 100 years old. Features intricate floral engravings and a rich patina.">
+                Add to Cart
+            </button>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="product-card">
+            <img src="imges/hand5.jpg" onerror="this.src='https://placehold.co/300x180'" alt="Jade Statue">
+            <h3> Hnadmade Craft Bag</h3>
+            <p>Rs 15,000.00</p>
+            <button class="add-to-cart-btn open-modal"
+                 data-img="imges/hand5.jpg"
+                 data-title="Genuine Imperial Jade Dragon Figurine"
+                 data-price="15000.00"
+                 data-desc="Carved from single block of fine Imperial Jade. Represents power and prosperity in Asian mythology.">
+                Add to Cart
+            </button>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="product-card">
+            <img src="imges/hand10.jpg" onerror="this.src='https://placehold.co/300x180'" alt="Silk Scarf">
+            <h3>Hnadmade Craft Dress</h3>
+            <p>Rs 2,850.75</p>
+            <button class="add-to-cart-btn open-modal"
+                 data-img="imges/hand10.jpg"
+                 data-title="Luxurious Hand-Painted Mulberry Silk Scarf"
+                 data-price="2850.75"
+                 data-desc="Lightweight and vibrant, painted with natural dyes. Features a unique abstract pattern.">
+                Add to Cart
+            </button>
+        </div>
+        
+        <!-- Card 5 -->
+        <div class="product-card">
+            <img src="imges/task1.jpeg" onerror="this.src='https://placehold.co/300x180'" alt="Silver Box">
+            <h3>Hnadmade BAg</h3>
+            <p>Rs 6,800.00</p>
+            <button class="add-to-cart-btn open-modal"
+                 data-img="imges/task1.jpeg"
+                 data-title="925 Sterling Silver Engraved Trinket Box"
+                 data-price="6800.00"
+                 data-desc="Small, finely crafted silver box ideal for jewelry or keepsakes. Hallmarked for quality.">
+                Add to Cart
+            </button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="product-card">
+            <img src="imges/handmade stone pot.webp" onerror="this.src='https://placehold.co/300x180'" alt="Ceramic Plate">
+            <h3>Handmade stone pot</h3>
+            <p>Rs 1,450.00</p>
+            <button class="add-to-cart-btn open-modal"
+                 data-img="imges/handmade stone pot.webp"
+                 data-title="Hand-Thrown Blue Glazed Serving Plate"
+                 data-price="1450.00"
+                 data-desc="A beautiful artisanal ceramic plate with deep indigo blue glaze. Dishwasher safe.">
+                Add to Cart
+            </button>
+        </div>
+        
+        <!-- Card 7 -->
+        <div class="product-card">
+            <img src="imges/baltitopi1.jpg" onerror="this.src='https://placehold.co/300x180'" alt="Wooden Mask">
+            <h3>Traditional cap</h3>
+            <p>Rs 7,999.00</p>
+            <button class="add-to-cart-btn open-modal"
+                 data-img="imges/baltitopi1.jpg"
+                 data-title="Authentic Hand-Carved Tribal Mask"
+                 data-price="7999.00"
+                 data-desc="Carved from dark hardwood, this mask showcases traditional ceremonial artistry and style.">
+                Add to Cart
+            </button>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="product-card">
+            <img src="imges/baltiwome1.jpg" onerror="this.src='https://placehold.co/300x180'" alt="Gemstone Ring">
+            <h3>Handmade Silver women Cap</h3>
+            <p>Rs 11,250.00</p>
+            <button class="add-to-cart-btn open-modal"
+                 data-img="imges/baltiwome1.jpg"
+                 data-title="Sterling Silver Ring with Natural Garnet"
+                 data-price="11250.00"
+                 data-desc="A deep red garnet set in a sterling silver filigree band. Comes in a velvet box.">
+                Add to Cart
+            </button>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="product-card">
+            <img src="imges/hnad7.jpg" onerror="this.src='https://placehold.co/300x180'" alt="Copper Pot">
+            <h3>BAlti dress</h3>
+            <p>Rs 4,100.00</p>
+            <button class="add-to-cart-btn open-modal"
+                 data-img="imges/hnad7.jpg"
+                 data-title="Hand-Hammered Solid Copper Serving Pot"
+                 data-price="4100.00"
+                 data-desc="A rustic, solid copper pot perfect for traditional cuisine or as a decorative piece.">
+                Add to Cart
+            </button>
+        </div>
+        
+        <!-- Card 10 -->
+        <div class="product-card">
+            <img src="imges/sheep wool coat1.png" onerror="this.src='https://placehold.co/300x180'" alt="Tapestry">
+            <h3>Hand-Woven Wall Tapestry</h3>
+            <p>Rs 19,000.00</p>
+            <button class="add-to-cart-btn open-modal"
+                 data-img="imges/sheep wool coat1.png"
+                 data-title="Large Hand-Woven Wool Tapestry"
+                 data-price="19000.00"
+                 data-desc="A colorful, detailed wall hanging depicting a forest scene, made from pure local wool.">
+                Add to Cart
+            </button>
+        </div>
+        
+        <!-- Card 11 -->
+        <div class="product-card">
+            <img src="imges/handbag.png" onerror="this.src='https://placehold.co/300x180'" alt="Ink Set">
+            <h3>Wool BAg</h3>
+            <p>Rs 2,300.00</p>
+            <button class="add-to-cart-btn open-modal"
+                 data-img="imges/sheep wool coat1.png"
+                 data-title="Traditional Calligraphy Ink and Pen Set"
+                 data-price="2300.00"
+                 data-desc="Includes five different natural inks and a finely tipped feather pen for elegant writing.">
+                Add to Cart
+            </button>
+        </div>
+        
+        <!-- Card 12 -->
+        <div class="product-card">
+            <img src="imges/shwal1.png" onerror="this.src='https://placehold.co/300x180'" alt="Leather Journal">
+            <h3>shwal G.B</h3>
+            <p>Rs 3,950.00</p>haz987
+            <button class="add-to-cart-btn open-modal"
+                 data-img="imges/shwal1.png"
+                 data-title="Hand-Bound Italian Leather Journal"
+                 data-price="3950.00"
+                 data-desc="Contains 200 pages of handmade cotton paper, bound in soft, deeply embossed leather.">
+                Add to Cart
+            </button>
+        </div>
+
+
+    </div>
+    <!-- END PRODUCT GRID -->
+
+
+    <!-- THE SINGLE MODAL STRUCTURE -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <img id="modalImg" src="" alt="Product Image">
+            
+            <div class="product-details">
+                <h2 id="modalTitle">Product Title</h2>
+                
+                <p>Unit Price: <span id="modalPrice" class="price">Rs 0.00</span></p>
+                <p id="modalDesc" class="description">Detailed product description will appear here.</p>
+
+                <!-- Quantity Control -->
+                <div class="quantity-control">
+                    <label for="qty">Quantity:</label>
+                    <button id="minus">-</button>
+                    <input type="number" id="qty" value="1" min="1" readonly>
+                    <button id="plus">+</button>
+                </div>
+
+                <div class="total-container">
+                    <p>Total Cost: <span id="totalPrice">Rs 0.00</span></p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button id="buyNowBtn">Buy Now</button>
+                    <button id="checkoutBtn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating Notification Box (for Add to Cart) -->
+    <div id="notificationBox" class="notification-box"  ></div> 
+
+    <!-- CONTACT/ORDER FORM SECTION (Initially hidden) -->
+    <section id="contactFormSection" style="display: none;" class="order-form-container">
+        <h2>Complete Your Order</h2>
+        <p>Please fill out your details to proceed with the purchase of **<span id="formProductTitle"></span>**.</p>
+        
+        <!-- NOTE: The form submission is handled by an alert since the environment doesn't support real server-side submissions -->
+        <form id="orderForm">
+            <!-- Pre-filled fields (Readonly to show the user what they are ordering) -->
+            <label for="formTitle">Product:</label>
+            <input type="text" id="formTitle" name="product" readonly>
+
+            <label for="formQty">Quantity:</label>
+            <input type="number" id="formQty" name="quantity" readonly>
+            
+            <label for="formPrice">Total Price:</label>
+            <input type="text" id="formPrice" name="total_price" readonly>
+
+            <!-- User fields -->
+            <label for="formName">Your Name:</label>
+            <input type="text" id="formName" placeholder="John Doe" required>
+
+            <label for="formEmail">Email Address:</label>
+            <input type="email" id="formEmail" placeholder="you@example.com" required>
+
+            <label for="formMessage">Delivery Instructions / Special Request (Optional):</label>
+            <textarea id="formMessage" placeholder="e.g., Deliver before 5pm, gift wrap needed"></textarea>
+
+            <button type="submit">Place Order & Contact Me</button>
+        </form>
+        <button id="goBackBtn">← Continue Shopping</button>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <div class="logo-placeholder">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <span class="logo-text"> HandiCraftHub</span>
+                </div>
+                <p>Celebrating handmade craftsmanship, supporting artisans, preserving traditions.</p>
+                <div class="social-links">
+                <a href="https://facebook.com" target="_blank">
+    
+                    <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/923480209401"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+               <li><a href="card.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="About us.html">About Us</a></li>
+                    <li><a href="contact us.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Handmade Jewelry</a></li>
+                    <li><a href="#">Textiles</a></li>
+                    <li><a href="#">Pottery</a></li>
+                    <li><a href="#">Wood Crafts</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Starting our journey</li>
+                    <li><i class="fas fa-phone"></i> Coming Soon</li>
+                    <li><i class="fas fa-envelope"></i> hello@crafthub.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CraftHub. A new beginning in handmade crafts.</p>
+        </div>
+    </footer>
+    <script src="home.js">
+          
+    </script>
+</body>
+</html>

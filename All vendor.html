@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Vendors - Handicraft Store</title>
+    <link rel="stylesheet" href="vendor.css">
+    <link rel="stylesheet" href="vendor.js">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+   <!-- Navbar -->
+ <!-- Navigation Header -->
+    <nav class="main-nav">
+      
+        <div class="nav-container">
+              <div class="logo">
+      <img src="imges/logo images.png" alt="Baltistan Handicrafts Logo">
+    </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="brand.html" class="nav-link">Brand</a>
+                <a href="About us.html" class="nav-link">About</a>
+                <a href="contact us.html" class="nav-link">Contact</a>
+                <a href="All vendor.htmls" class="nav-link">All Vendor</a>
+            </div>
+            <div class="search-box-nav">
+                <input type="text" placeholder="Search product..." id="main-search">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="vendor-hero">
+        <div class="hero-content">
+            <h1>Meet Our Artisans</h1>
+            <p>Discover the talented creators behind our handmade products</p>
+        </div>
+    </section>
+
+    <!-- Vendor Content -->
+    <main class="vendor-container">
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-info">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Verified Vendors</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="stat-info">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Regions Covered</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <div class="stat-info">
+                        <span class="stat-number">4.8/5</span>
+                        <span class="stat-label">Average Rating</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-award"></i>
+                    <div class="stat-info">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Years Combined Experience</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="filter-section">
+            <div class="filter-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search vendors by name, location, or specialty..." id="vendor-search">
+                </div>
+                <div class="filter-options">
+                    <select id="category-filter">
+                        <option value="">All Categories</option>
+                        <option value="pottery">Pottery</option>
+                        <option value="textiles">Textiles</option>
+                        <option value="jewelry">Jewelry</option>
+                        <option value="woodwork">Woodwork</option>
+                        <option value="metalwork">Metalwork</option>
+                    </select>
+                    <select id="location-filter">
+                        <option value="">All Locations</option>
+                        <option value="north">Northern Region</option>
+                        <option value="south">Southern Region</option>
+                        <option value="east">Eastern Region</option>
+                        <option value="west">Western Region</option>
+                    </select>
+                    <select id="experience-filter">
+                        <option value="">All Experience Levels</option>
+                        <option value="beginner">Beginner (1-3 years)</option>
+                        <option value="intermediate">Intermediate (4-10 years)</option>
+                        <option value="expert">Expert (10+ years)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vendors Grid -->
+        <section class="vendors-section">
+            <div class="section-header">
+                <h2>Featured Artisans</h2>
+                <p>Handpicked vendors with exceptional craftsmanship</p>
+            </div>
+
+            <div class="vendors-grid" id="vendors-grid">
+                <!-- Vendor cards will be loaded here -->
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more">
+                <button id="load-more-btn" class="load-more-btn">
+                    <i class="fas fa-spinner"></i>
+                    Load More Vendors
+                </button>
+            </div>
+        </section>
+
+        <!-- Why Choose Our Vendors -->
+        <section class="benefits-section">
+            <div class="benefits-content">
+                <h2>Why Choose Our Vendors?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Verified Quality</h3>
+                        <p>Every vendor undergoes strict quality checks and verification process</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Fair Trade</h3>
+                        <p>We ensure fair pricing and ethical practices for all our artisans</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Eco-Friendly</h3>
+                        <p>Our vendors use sustainable materials and traditional techniques</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Expert Craftsmanship</h3>
+                        <p>Years of experience and traditional knowledge in every piece</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="vendor-cta">
+            <div class="cta-content">
+                <h2>Become a Vendor</h2>
+                <p>Are you an artisan with unique handmade products? Join our community and reach customers worldwide.</p>
+                <div class="cta-buttons">
+                    <a href="All vendor.html" class="cta-btn primary">Apply as Vendor</a>
+                    <a href="contact us.html" class="cta-btn secondary">Contact US</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <div class="logo-placeholder">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <span class="logo-text"> HandiCraftHub</span>
+                </div>
+                <p>Celebrating handmade craftsmanship, supporting artisans, preserving traditions.</p>
+                <div class="social-links">
+                <a href="https://facebook.com" target="_blank">
+    
+                    <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/923480209401"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+               <li><a href="card.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="About us.html">About Us</a></li>
+                    <li><a href="contact us.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Handmade Jewelry</a></li>
+                    <li><a href="#">Textiles</a></li>
+                    <li><a href="#">Pottery</a></li>
+                    <li><a href="#">Wood Crafts</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Starting our journey</li>
+                    <li><i class="fas fa-phone"></i> Coming Soon</li>
+                    <li><i class="fas fa-envelope"></i> hello@crafthub.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CraftHub. A new beginning in handmade crafts.</p>
+        </div>
+    </footer>
+    <script src="vendor.js"></script>
+</body>
+</html>

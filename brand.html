@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Products - Handicraft Store</title>
+    <link rel="stylesheet" href="brand.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="main-nav">
+      
+        <div class="nav-container">
+              <div class="logo">
+      <img src="imges/logo images.png" alt="Baltistan Handicrafts Logo">
+    </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="brand.html" class="nav-link">Brand</a>
+                <a href="About us.html" class="nav-link">About Us</a>
+                <a href="contact us.html" class="nav-link">Contact</a>
+                <a href="All vendor.html" class="nav-link">All Vendor</a>
+            </div>
+            <div class="search-box-nav">
+                <input type="text" placeholder="Search product..." id="main-search">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="brand-container">
+        <!-- Main Header -->
+        <header class="brand-header">
+            <h1>Search for</h1>
+            <div class="results-info">
+                <span class="item-count">items found</span>
+            </div>
+        </header>
+
+        <div class="brand-content">
+            <!-- Sidebar Filters -->
+            <aside class="filter-sidebar">
+                <h3>Filters</h3>
+
+                <!-- Most Favorite -->
+                <div class="filter-section">
+                    <label class="filter-checkbox">
+                        <input type="checkbox" id="most-favorite">
+                        <span class="checkmark"></span>
+                        Most Favorite
+                    </label>
+                </div>
+
+                <!-- Sort by -->
+                <div class="filter-section">
+                    <h4>Sort by</h4>
+                    <select class="sort-select" id="sort-select">
+                        <option value="default">Default</option>
+                        <option value="price-low">Price (Low to High)</option>
+                        <option value="price-high">Price (High to Low)</option>
+                        <option value="best-selling">Best Selling</option>
+                        <option value="top-rated">Top Rated</option>
+                        <option value="most-favorite">Most Favorite</option>
+                    </select>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-section">
+                    <h4>Price</h4>
+                    <div class="price-inputs">
+                        <div class="price-input">
+                            <input type="number" id="min-price" placeholder="Min" value="0" min="0">
+                        </div>
+                        <div class="price-input">
+                            <input type="number" id="max-price" placeholder="Max" value="38000" min="0">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="filter-section">
+                    <h4>Categories</h4>
+                    <div class="category-list">
+                        <label class="category-item">
+                            <input type="checkbox" name="category" value="stone_gem_crafts">
+                            <span class="checkmark"></span>
+                          Stone & Gem Crafts
+                        </label>
+                        <label class="category-item">
+                            <input type="checkbox" name="category" value="wool_textile_crafts">
+                            <span class="checkmark"></span>
+                         Wool & Textile Crafts
+                        </label>
+                        <label class="category-item">
+                            <input type="checkbox" name="category" value="wood_bamboo_crafts">
+                            <span class="checkmark"></span>
+                        Wood & Bamboo Crafts
+                        </label>
+                        
+                      <label class="category-item">
+                            <input type="checkbox" name="category" value="embroidery_fabric_art">
+                            <span class="checkmark"></span>
+                      Embroidery & Fabric Art
+                        </label>
+                        
+                    </div>
+                </div>
+
+                <!-- Filter Actions -->
+                <div class="filter-actions">
+                    <button class="apply-filters" id="apply-filters">Apply Filters</button>
+                    <button class="reset-filters" id="reset-filters">Reset All</button>
+                </div>
+            </aside>
+
+            <!-- Main Products Grid -->
+            <main class="products-main">
+                <!-- Products Grid -->
+                <div class="products-grid" id="products-grid">
+                    <!-- Product cards will be loaded here -->
+                </div>
+
+                <!-- Load More -->
+                <div class="load-more">
+                    <button id="load-more-btn">Load More Products</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <div class="logo-placeholder">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <span class="logo-text"> HandiCraftHub</span>
+                </div>
+                <p>Celebrating handmade craftsmanship, supporting artisans, preserving traditions.</p>
+                <div class="social-links">
+                <a href="images/hand1" target="_blank">
+    
+                    <a href="images/hand2.jpg"><i class="fab fa-instagram"></i></a>
+                    <a href="images/hand3.jpg"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/923480209401"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="card.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="About us.html">About Us</a></li>
+                    <li><a href="contact us.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Handmade Jewelry</a></li>
+                    <li><a href="#">Textiles</a></li>
+                    <li><a href="#">Pottery</a></li>
+                    <li><a href="#">Wood Crafts</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Starting our journey</li>
+                    <li><i class="fas fa-phone"></i> Coming Soon</li>
+                    <li><i class="fas fa-envelope"></i> hello@crafthub.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CraftHub. A new beginning in handmade crafts.</p>
+        </div>
+    </footer>
+    <script src="brand.js"></script>
+</body>
+</html>

@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.logo img {
+    height: 60px;  /* adjust size */
+    width: 60px;   /* same width as height */
+    border-radius: 100%; /* makes it round */
+    object-fit: cover;  /* keeps image ratio inside circle */
+  
+  }
+
+/* Main Navigation */
+.main-nav {
+    background:#2c3e50;
+    padding: 0 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color:white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    background: #667eea;
+    color: white;
+}
+
+.search-box-nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-box-nav input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.search-btn {
+    padding: 0.5rem 1.5rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+      /* Slider */
+  
+  .slider {
+    width: 100%;
+    height: 380px;
+    
+overflow: hidden;
+    position:relative;
+    border: 2px solid #333;
+  }
+  .slides {
+    display: flex;
+    transition: transform 1s ease;
+    
+  }
+  .slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+  }
+
+  .arrow.left {
+    left: 15px;
+  }
+  .arrow.right {
+    right: 15px;
+  }
+    .featured-products {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 1300px;
+}
+.featured-products h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.featured-products p {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+      /* 1. Product Grid Layout */
+      .product-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 25px;
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+
+      /* Card Styling */
+      .product-card {
+          background: #fff;
+          border: 1px solid #e0e0e0;
+          border-radius: 12px;
+          padding: 20px;
+          text-align: center;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+          transition: transform 0.2s, box-shadow 0.2s;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+
+      .product-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .product-card img {
+          max-width: 100%;
+          height: 180px; 
+          object-fit: contain;
+          border-radius: 8px;
+          margin-bottom: 15px;
+      }
+
+      .product-card h3 {
+          font-size: 1.2em;
+          margin: 5px 0;
+          color: #333;
+      }
+
+      .product-card p {
+          font-weight: bold;
+          color: #8b4513; /* Brown price color */
+          margin-bottom: 15px;
+          font-size: 1.1em;
+      }
+
+      /* Button Styling (Grid button) */
+      .add-to-cart-btn {
+          background-color: #555555; /* Dark Gray */
+          color: white;
+          border: none;
+          padding: 12px 25px;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 1em;
+          font-weight: 600;
+          transition: background-color 0.2s;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          margin-top: 10px;
+      }
+
+      .add-to-cart-btn:hover {
+          background-color: #333333;
+      }
+
+      /* 2. Modal Styling */
+      .modal {
+          display: none; /* Hidden by default */
+          position: fixed;
+          z-index: 1000;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,0.7); /* Dark overlay */
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          overflow-y: auto;
+      }
+
+      .modal-content {
+          background-color: #ffffff;
+          border-radius: 15px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+          width: 100%;
+          max-width: 900px;
+          display: flex;
+          gap: 30px;
+          padding: 40px;
+          position: relative;
+          max-height: 90vh;
+      }
+
+      .close {
+          color: #999;
+          position: absolute;
+          top: 15px;
+          right: 25px;
+          font-size: 30px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: color 0.2s;
+      }
+
+      .close:hover,
+      .close:focus {
+          color: #555;
+      }
+
+      /* Modal Details Area (unchanged) */
+      #modalImg { width: 40%; height: auto; max-height: 400px; object-fit: contain; border-radius: 8px; padding: 10px; background-color: #f9f9f9; }
+      .product-details { width: 60%; }
+      .product-details h2 { margin-top: 0; font-size: 2em; color: #333; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
+      #modalPrice { font-size: 1.6em; font-weight: 700; color: #8b4513; display: block; margin: 15px 0; }
+      .quantity-control { display: flex; align-items: center; margin: 25px 0; gap: 10px; }
+      .quantity-control label { font-weight: 600; margin-right: 10px; }
+      .quantity-control button { background-color: #e0e0e0; color: #333; border: none; padding: 8px 15px; cursor: pointer; font-size: 1.2em; font-weight: bold; border-radius: 50%; width: 40px; height: 40px; line-height: 1; transition: background-color 0.1s; }
+      .quantity-control button:hover { background-color: #cccccc; }
+      #qty { width: 60px; text-align: center; padding: 10px 5px; border: 1px solid #ccc; border-radius: 8px; font-size: 1.1em; }
+      .total-container { margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; }
+      #totalPrice { font-size: 2em; font-weight: bold; color: #333; }
+      .action-buttons { margin-top: 30px; }
+      .action-buttons button { padding: 15px 30px; border: none; border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 1.1em; transition: background-color 0.2s; margin-right: 15px; }
+      #buyNowBtn { background-color: #8b4513; color: white; }
+      #checkoutBtn { background-color: #333333; color: white; }
+      #buyNowBtn:hover { background-color: #a0522d; }
+      #checkoutBtn:hover { background-color: #111111; }
+
+      /* 3. Notification Box (Feedback Message) Styling (Used for Add to Cart) */
+      .notification-box {
+          position: fixed;
+          bottom: 30px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #4CAF50; /* Green for success */
+          color: white;
+          padding: 15px 30px;
+          border-radius: 8px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          z-index: 2000;
+          opacity: 0; 
+          visibility: hidden;
+          transition: opacity 0.3s, visibility 0.3s;
+          font-weight: 600;
+          min-width: 250px;
+          text-align: center;
+      }
+      .notification-box.show {
+          opacity: 1;
+          visibility: visible;
+      }
+
+      /* 4. Contact/Order Form Styling */
+      .order-form-container {
+          max-width: 600px;
+          margin: 50px auto;
+          padding: 40px;
+          background: #ffffff;
+          border-radius: 12px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .order-form-container h2 {
+          text-align: center;
+          color: #8b4513;
+          margin-bottom: 10px;
+      }
+
+      .order-form-container p {
+          text-align: center;
+          margin-bottom: 30px;
+          color: #666;
+      }
+
+      #orderForm label {
+          display: block;
+          margin-top: 15px;
+          font-weight: 600;
+          color: #555;
+      }
+
+      #orderForm input[type="text"],
+      #orderForm input[type="email"],
+      #orderForm input[type="number"],
+      #orderForm textarea {
+          width: 100%;
+          padding: 12px;
+          margin-top: 5px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          box-sizing: border-box;
+          font-size: 1em;
+      }
+      
+      #orderForm input[readonly] {
+          background-color: #f0f0f0;
+          font-weight: bold;
+          color: #333;
+      }
+      
+      #orderForm textarea {
+          resize: vertical;
+          min-height: 100px;
+      }
+
+      #orderForm button[type="submit"] {
+          display: block;
+          width: 100%;
+          background-color: #007bff; /* Blue for submission */
+          color: white;
+          padding: 15px;
+          margin-top: 25px;
+          border: none;
+          border-radius: 8px;
+          font-size: 1.1em;
+          cursor: pointer;
+          transition: background-color 0.2s;
+      }
+
+      #orderForm button[type="submit"]:hover {
+          background-color: #0056b3;
+      }
+      
+      #goBackBtn {
+          display: block;
+          width: 100%;
+          background: none;
+          border: 1px solid #ccc;
+          color: #555;
+          padding: 10px;
+          margin-top: 20px;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.2s;
+      }
+      
+      #goBackBtn:hover {
+          background-color: #f0f0f0;
+      }
+   /* Footer */
+.main-footer {
+    background: #2d3748;
+    color: white;
+    padding: 3rem 0 1rem;
+    margin-top: 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    color: #e2e8f0;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #cbd5e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: #4a5568;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #667eea;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #4a5568;
+    color: #cbd5e0;
+}

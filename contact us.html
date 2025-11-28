@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Skardu Naturals</title>
+    <link rel="stylesheet" href="contact.css">
+  
+</head>
+<body>
+      <!-- Navigation Header -->
+    <nav class="main-nav">
+      
+        <div class="nav-container">
+              <div class="logo">
+      <img src="imges/logo images.png" alt="Baltistan Handicrafts Logo">
+    </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="brand.html" class="nav-link">Brand</a>
+                <a href="About us.html" class="nav-link">About</a>
+                <a href="contact us.html" class="nav-link">Contact</a>
+                <a href="All vendor.html" class="nav-link">All Vendor</a>
+            </div>
+            <div class="search-box-nav">
+                <input type="text" placeholder="Search product..." id="main-search">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </nav>
+ <!-- From Section -->
+ 
+    <div class="order-form-container">
+        <h2>Place Your Order</h2>
+        <p>Complete your purchase</p>
+        
+        <div class="product-info">
+            <strong>Product: </strong><span id="displayProduct">No product selected</span><br>
+            <strong>Quantity: </strong><span id="displayQty">1</span><br>
+            <strong>Total Price: </strong><span id="displayPrice">Rs 0.00</span>
+        </div>
+        
+        <form id="orderForm">
+            <label for="formName">Full Name:</label>
+            <input type="text" id="formName" name="name" required>
+            
+            <label for="formEmail">Email:</label>
+            <input type="email" id="formEmail" name="email" required>
+            
+            <label for="formPhone">Phone:</label>
+            <input type="text" id="formPhone" name="phone" required>
+            
+            <label for="formAddress">Address:</label>
+            <textarea id="formAddress" name="address" required></textarea>
+            
+            <button type="submit">Submit Order</button>
+        </form>
+        
+        <a href="card.html" style="display: block; text-align: center; margin-top: 20px;">← Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <div class="logo-placeholder">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <span class="logo-text"> HandiCraftHub</span>
+                </div>
+                <p>Celebrating handmade craftsmanship, supporting artisans, preserving traditions.</p>
+                <div class="social-links">
+                <a href="https://facebook.com" target="_blank">
+    
+                    <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/923480209401"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                      <li><a href="card.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="About us.html">About Us</a></li>
+                    <li><a href="contact us.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Handmade Jewelry</a></li>
+                    <li><a href="#">Textiles</a></li>
+                    <li><a href="#">Pottery</a></li>
+                    <li><a href="#">Wood Crafts</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Starting our journey</li>
+                    <li><i class="fas fa-phone"></i> Coming Soon</li>
+                    <li><i class="fas fa-envelope"></i> hello@crafthub.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CraftHub. A new beginning in handmade crafts.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get product data from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product');
+        const quantity = urlParams.get('quantity');
+        const price = urlParams.get('price');
+
+        // Fill product info
+        if (product) {
+            document.getElementById('displayProduct').textContent = product;
+            document.getElementById('displayQty').textContent = quantity;
+            document.getElementById('displayPrice').textContent = price;
+        }
+
+        // Handle form submission
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Order submitted successfully!');
+            window.location.href = 'card.html';
+        });
+    </script>
+</body>
+</html>
